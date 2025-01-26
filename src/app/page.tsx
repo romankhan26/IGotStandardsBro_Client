@@ -5,9 +5,6 @@ export default function Home() {
   return (
    <div className="px-4 sm:px-8 md:px-16 lg:px-36 xl:px-72 max-w-7xl w-full mx-auto my-10 md:my-20">
   {/* <div className="w-full max-w-7xl"> */}
- 
-
-
 <div className="flex items-center justify-center my-[80px] md:my-[150px] gap-10 mx-auto flex-col text-center">
   <h1 className="text-4xl md:text-5xl font-bold text-shadow md:-mt-16 text-[#f4f4f4]">Female Delusion
     Calculator</h1>
