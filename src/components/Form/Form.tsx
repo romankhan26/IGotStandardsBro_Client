@@ -11,9 +11,9 @@ import { Data, APIResponse } from "@/app/data";
 import { fetchData } from "@/lib/api";
 
 const Form = () => {
+  const [,setResult] = useAtom(APIResponse);
   const router = useRouter();
   const [data] = useAtom(Data);
-  const [result, setResult] = useAtom(APIResponse);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>("");
 
