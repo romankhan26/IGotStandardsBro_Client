@@ -28,6 +28,7 @@ const Race = () => {
               id={index.toString()}
               onChange={hnadleChange}
               name="race"
+              defaultChecked={index === 0 }
               value={item}
               className="w-4 md:w-6 h-4 md:h-6 cursor-pointer"
             />

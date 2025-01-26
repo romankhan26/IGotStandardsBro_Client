@@ -1,19 +1,12 @@
-// "use client"
-// import { useAtom } from "jotai"
-// import { Data } from "../data"
+"use client"
+import { useAtom } from "jotai"
+import { APIResponse } from "../data"
 
-const Results =async () => {
-    // const [data]= useAtom(Data)
-    // const response = await fetch("https://i-got-standards-bro-backend.onrender.com/api/v1/query/",{
-    //     method: "POST",
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },body:JSON.stringify(data)
-    // })
-    // const json = await response.json()
-    // console.log(json)
-  return (
-    <div>Results</div>
+const Results = () => {
+  const [responseData]= useAtom(APIResponse)
+  console.log(responseData,"response data in result page by romi khan");
+ return (
+    <div>{responseData.height_base_samples}</div>
   )
 }
 

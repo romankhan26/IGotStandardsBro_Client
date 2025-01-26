@@ -95,7 +95,7 @@ const MinHeight = () => {
       </div>
       </div>
       <label
-        htmlFor="exclude-married"
+        htmlFor="exclude-obese"
         className="flex items-center gap-1 md:gap-2 cursor-pointer"
       >
         <input
