@@ -39,6 +39,3 @@ input[type="range"] {
   pointer-events: none;
 } 
 
-#minHeight::-webkit-scrollbar-track-piece {
-background: red;
-}

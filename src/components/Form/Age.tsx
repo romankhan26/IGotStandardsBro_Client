@@ -1,21 +1,21 @@
 "use client";
 import "./Slider.css";
 import { useState } from "react";
-import { Data } from "@/app/data";
-import { useAtom } from "jotai";
+import { Data } from "@/lib/data";
+import {  useSetAtom } from "jotai";
 
 const Age = () => {
-  const [data, setData] = useAtom(Data);
-// console.log(data)
+  const  setData = useSetAtom(Data);
+  // console.log(data)
   // State for age ranges
   const [minAge, setMinAge] = useState(20);
   const [maxAge, setMaxAge] = useState(40);
 
-  const rangeDistance = 85 - 18  ;
+  const rangeDistance = 85 - 18 + 1;
   const AgeGap = 5;
 
   // Calculate filled background positions
-  const fromPosition = Math.ceil((((minAge - 18) / rangeDistance) * 100));
+  const fromPosition = Math.ceil(((minAge - 18) / rangeDistance) * 100);
   const toPosition = Math.ceil(((85 - maxAge) / rangeDistance) * 100);
   // console.log(fromPosition, toPosition)
   const FilledBackground = {
@@ -24,37 +24,40 @@ const Age = () => {
   };
 
   // Update min age handler
+
+  
+  
   const handleMinAge = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault()
     const value = Number(e.target.value);
     if (value < maxAge && maxAge - value >= AgeGap) {
-   try {
-      setMinAge(value);
-      setData({ ...data, min_age: value });
-    } catch (error) {
-      console.log("Failed to update minAge:",error)
+    
+        setMinAge(value);
+        setData((prev:object)=>({ ...prev, min_age: value }));
+    
     }
-  }
   };
 
   // Update max age handler
   const handleMaxAge = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault()
+
     const value = Number(e.target.value);
     if (value > minAge && value - minAge >= AgeGap) {
-        try {
+     
         setMaxAge(value);
-        setData({ ...data, max_age: value }); // Update the Jotai atom
-      } catch (error) {
-        console.log("Failed to update maxAge:",error)
-      }
+        setData((prev:object)=>({ ...prev, max_age: value })); // Update the Jotai atom
+     
     }
   };
 
   // Exclude married state
   const [isChecked, setIsChecked] = useState(false);
   const handleCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault()
     const checked = e.target.checked;
     setIsChecked(checked);
-    setData({ ...data, exclude_married: checked }); // Update the Jotai atom
+    setData((prev:object)=>({ ...prev, exclude_married: checked })); // Update the Jotai atom
   };
 
   return (
@@ -63,21 +66,13 @@ const Age = () => {
         Age
       </h2>
 
-      <div className="relative py-10 w-full mx-auto">
+      <div className=" py-10 w-full mx-auto">
         <div className="bg-[#C6C6C6] h-[4px] relative rounded-full">
-          <div className="bg-primary h-[4px] absolute flex justify-between mx-auto" style={FilledBackground}>
-              <div className="border bg-primary px-2 md:-mt-12 -mt-10 font-mono tracking-wider  mx-0 w-6 md:w-8 h-6 md:h-8 rounded-bl-[50%] rounded-t-[50%] rotate-45 shrink-0 relative ">
-                <span className="md:text-sm font-bold md:-ml-1 md:pt-1 text-center text-[12px] rotate-[-45deg] absolute">
-                  {minAge}
-                </span>
-              </div>
-              <div className="border bg-primary px-2 md:-mt-12 -mt-10 font-mono tracking-wider  mx-0 w-6 md:w-8 h-6 md:h-8 rounded-bl-[50%] rounded-t-[50%] rotate-45 shrink-0 relative ">
-                <span className="md:text-sm font-bold md:-ml-1 md:pt-1 text-center text-[12px] rotate-[-45deg] absolute">
-                  {maxAge}
-                </span>
-              </div>
-          </div>
-        
+          <div
+            className="bg-primary h-[4px]   absolute flex gap-5 justify-between mx-auto"
+            style={FilledBackground}
+          ></div>
+
           <input
             id="minAge"
             type="range"
@@ -87,7 +82,7 @@ const Age = () => {
             onChange={handleMinAge}
             className="w-full"
           />
-        
+
           <input
             id="maxAge"
             type="range"
@@ -97,6 +92,19 @@ const Age = () => {
             onChange={handleMaxAge}
             className="w-full"
           />
+        </div>
+        {/* Container Age Representator */}
+        <div className="flex items-center justify-center gap-4 md:gap-8 -mb-5 md:-mb-0 mt-5 md:mt-10">
+          <div className=" border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 md:px-8 py-1 md:py-2 font-bold rounded-xl">
+            <span className="text-[#ababab] text-[14px]">Min.</span>
+          {minAge}
+          </div>
+          <div className="w-4 bg-[#c6c6c6ca] h-[1px]"/>
+          <div className=" border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 md:px-8  py-1 md:py-2 font-bold rounded-xl">
+
+            <span className="text-[#ababab] text-[14px]">Max.</span>
+            {maxAge}
+          </div>
         </div>
       </div>
 

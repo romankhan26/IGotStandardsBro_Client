@@ -1,6 +1,6 @@
 const Stats = () => {
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-36 xl:px-72 max-w-7xl w-full mx-auto my-10 md:my-20">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-44 xl:px-72 max-w-7xl w-full mx-auto my-10 md:my-20">
       <h1 className=" text-center mb-3 md:mb-6 text-4xl md:text-5xl font-bold text-shadow   text-primary">
         Stats
       </h1>

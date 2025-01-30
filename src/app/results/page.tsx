@@ -1,12 +1,16 @@
-"use client"
-import { useAtom } from "jotai"
-import { APIResponse } from "../data"
+import IdealMan from "@/components/Result/IdealMan"
+import ProbabilityGrid from "@/components/Result/Probability"
+// import Probability from "@/components/Result/Probability"
 
 const Results = () => {
-  const [responseData]= useAtom(APIResponse)
-  console.log(responseData,"response data in result page by romi khan");
  return (
-    <div>{responseData.height_base_samples}</div>
+  <div className="px-4 sm:px-8 md:px-16 lg:px-44 xl:px-72 max-w-7xl w-full mx-auto my-10 md:my-20  ">
+
+ <IdealMan/>
+ <ProbabilityGrid/>
+   
+  </div>
+ 
   )
 }
 

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-
+import { Suspense } from "react";
+import Loading from "./loading";
 const roboto = Roboto({
-weight:"400",
+weight:"300",
 subsets:["latin"]
 });
 
@@ -26,7 +27,9 @@ export default function RootLayout({
       >
         <NavBar/>
         <div className=" md:px-12  ">
+        <Suspense fallback={<Loading />}>
         {children}
+</Suspense>
         </div>
       </body>
     </html>

@@ -7,13 +7,13 @@ import MinHeight from "./MinHeight";
 import MinIncome from "./MinIncome";
 import { useRouter } from "next/navigation";
 import { useAtom } from "jotai";
-import { Data, APIResponse } from "@/app/data";
+import { Data, APIResponse } from "@/lib/data";
 import { fetchData } from "@/lib/api";
 
 const Form = () => {
   const [,setResult] = useAtom(APIResponse);
-  const router = useRouter();
   const [data] = useAtom(Data);
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>("");
 
@@ -59,7 +59,7 @@ const Form = () => {
       <br />
       <button
         type="submit"
-        className="bg-[#ffffff18] shadow-xl space-y-4 text-xl md:text-2xl rounded-xl p-4 md:p-8 w-full font-bold"
+        className="bg-[#ffffff18] hover:bg-primary hover:text-black transition-all active:scale-95 active:bg-[#45b5ffca] duration-300 shadow-xl space-y-4 text-xl md:text-2xl rounded-xl p-4 md:p-8 w-full font-bold"
         disabled={loading}
       >
         {loading ? "Submitting..." : "Submit"}

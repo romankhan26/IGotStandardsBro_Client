@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Privacy= ()=>{        
     return (
-      <div className="px-4 sm:px-8 md:px-16 lg:px-36 xl:px-72 max-w-7xl w-full mx-auto my-10 md:my-20">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-44 xl:px-72 max-w-7xl w-full mx-auto my-10 md:my-20">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-3 md:mb-6 text-shadow text-primary">Privacy Policy</h1>
         <div className="bg-[#ffffff18] shadow-xl text-base	md:text-lg rounded-xl  space-y-4 p-4 md:p-8 pb-8 md:pb-16">
           <p>

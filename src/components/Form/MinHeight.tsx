@@ -1,11 +1,11 @@
 "use client";
 import "./Slider.css";
-import { Data } from "@/app/data";
-import { useAtom } from "jotai";
+import { Data } from "@/lib/data";
+import { useSetAtom } from "jotai";
 import { useState } from "react";
 
 const MinHeight = () => {
-  const [data, setData] = useAtom(Data);
+  const setData = useSetAtom(Data);
   const heightOptions: string[] = [];
 
   for (let feet = 4; feet <= 7; feet++) {
@@ -38,7 +38,7 @@ const MinHeight = () => {
     let inches = 0;
 
     if (heightStr === "Any") {
-      setData({ ...data, min_height: 0 }); 
+      setData((prev)=>({ ...prev, min_height: 0 })); 
       return;
     } else {
       const [feetPart, inchesPart] = heightStr.split("'");
@@ -48,7 +48,7 @@ const MinHeight = () => {
 
     const cmValue = convertToCm(feet, inches);
 
-    setData({ ...data, min_height: cmValue });
+    setData((prev)=>({ ...prev, min_height: cmValue }));
     // console.log(cmValue);
   };
 
@@ -62,21 +62,23 @@ const MinHeight = () => {
   const handleCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
     const checked = e.target.checked;
     setIsChecked(checked);
-    setData({ ...data, exclude_obese: checked }); 
+    setData((prev)=>({ ...prev, exclude_obese: checked })); 
   };
 
 
   return (
     <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base md:text-lg rounded-xl p-4 md:p-8 pb-8 md:pb-16">
-      <h2 className="text-3xl font-bold md:text-4xl text-center my-1 md:my-2">
+   <div className="flex items-center justify-between flex-col md:flex-row">  <h2 className="text-3xl font-bold md:text-4xl text-center my-1 md:my-2">
         Min. Height
+      
       </h2>
 
+      <div className="  text-center md:w-[20%] w-[50%]   border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 -mb-5 md:-mb-0 mt-5 md:mt-10  md:px-8 py-2 md:py-2 font-bold rounded-xl">
+          {heightOptions[minHeightIndex]}
+          </div>
+          </div> 
 
-
-
-
-      <div className="relative py-10 w-full mx-auto">
+      <div className=" py-10 w-full mx-auto">
 
       <div className="bg-[#C6C6C6] h-[4px] relative rounded-full">
         <div
@@ -93,6 +95,7 @@ const MinHeight = () => {
           className="w-full"
         />
       </div>
+     
       </div>
       <label
         htmlFor="exclude-obese"
