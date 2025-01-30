@@ -11,6 +11,7 @@ export const Data = atomWithStorage("user input", {
   ...(a && JSON.parse(a)),
 
 });
+export const race = ["Any color or shade", "White", "Black", "Asian"];
 
 export const APIResponse = atomWithStorage("output",{
 

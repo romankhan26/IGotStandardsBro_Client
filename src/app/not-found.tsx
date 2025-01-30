@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { HiHome } from "react-icons/hi2";
-Link
 const NotFound = () => {
   return (
     <>

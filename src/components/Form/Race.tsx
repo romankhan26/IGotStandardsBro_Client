@@ -1,15 +1,14 @@
 "use client";
 import { Data } from "@/lib/data";
 import { useSetAtom } from "jotai";
-
+import {race} from "@/lib/data"
 const Race = () => {
   const setData = useSetAtom(Data);
-  const race = ["Any color or shade", "White", "Black", "Asian"];
 
   const hnadleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = race.indexOf(e.target.value);
     // console.log(value)
-    setData((prev)=>({ ...prev, race: value }));
+    setData((prev:object)=>({ ...prev, race: value }));
   };
   return (
     <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base md:text-lg rounded-xl p-4 md:p-8 pb-8 md:pb-16">

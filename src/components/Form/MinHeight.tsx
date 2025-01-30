@@ -38,7 +38,7 @@ const MinHeight = () => {
     let inches = 0;
 
     if (heightStr === "Any") {
-      setData((prev)=>({ ...prev, min_height: 0 })); 
+      setData((prev:object)=>({ ...prev, min_height: 0 })); 
       return;
     } else {
       const [feetPart, inchesPart] = heightStr.split("'");
@@ -48,7 +48,7 @@ const MinHeight = () => {
 
     const cmValue = convertToCm(feet, inches);
 
-    setData((prev)=>({ ...prev, min_height: cmValue }));
+    setData((prev:object)=>({ ...prev, min_height: cmValue }));
     // console.log(cmValue);
   };
 
@@ -62,7 +62,7 @@ const MinHeight = () => {
   const handleCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
     const checked = e.target.checked;
     setIsChecked(checked);
-    setData((prev)=>({ ...prev, exclude_obese: checked })); 
+    setData((prev:object)=>({ ...prev, exclude_obese: checked })); 
   };
 
 
@@ -73,7 +73,7 @@ const MinHeight = () => {
       
       </h2>
 
-      <div className="  text-center md:w-[20%] w-[50%]   border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 -mb-5 md:-mb-0 mt-5 md:mt-10  md:px-8 py-2 md:py-2 font-bold rounded-xl">
+      <div className="  text-center md:w-[20%] w-[50%]   border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 -mb-5 md:-mb-0 mt-5 md:mt-0  md:px-8 py-2 md:py-2 font-bold rounded-xl">
           {heightOptions[minHeightIndex]}
           </div>
           </div> 

@@ -2,14 +2,15 @@
 import "./Slider.css";
 import { useState } from "react";
 import { Data } from "@/lib/data";
-import {  useSetAtom } from "jotai";
+import {  useAtom, useSetAtom } from "jotai";
 
 const Age = () => {
-  const  setData = useSetAtom(Data);
+  const  [data,setData] = useAtom(Data);
   // console.log(data)
   // State for age ranges
-  const [minAge, setMinAge] = useState(20);
-  const [maxAge, setMaxAge] = useState(40);
+  const [minAge, setMinAge] = useState(data.min_age || 20);
+  const [maxAge, setMaxAge] = useState(data.max_age || 40);
+  const [isChecked, setIsChecked] = useState(data.exclude_married || false);
 
   const rangeDistance = 85 - 18 + 1;
   const AgeGap = 5;
@@ -28,7 +29,6 @@ const Age = () => {
   
   
   const handleMinAge = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault()
     const value = Number(e.target.value);
     if (value < maxAge && maxAge - value >= AgeGap) {
     
@@ -40,7 +40,6 @@ const Age = () => {
 
   // Update max age handler
   const handleMaxAge = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault()
 
     const value = Number(e.target.value);
     if (value > minAge && value - minAge >= AgeGap) {
@@ -52,9 +51,7 @@ const Age = () => {
   };
 
   // Exclude married state
-  const [isChecked, setIsChecked] = useState(false);
   const handleCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault()
     const checked = e.target.checked;
     setIsChecked(checked);
     setData((prev:object)=>({ ...prev, exclude_married: checked })); // Update the Jotai atom
