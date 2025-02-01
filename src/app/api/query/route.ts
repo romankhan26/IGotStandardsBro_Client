@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     }
 
     const responseData = await externalApiResponse.json();
-console.log(responseData)
+// console.log(responseData)
     return new Response(JSON.stringify(responseData), {
       status: 200,
       headers: {
@@ -27,8 +27,8 @@ console.log(responseData)
       },
     });
 
-  } catch (err) {
-    return new Response(JSON.stringify({ err: "Failed to fetch data from external API" }), {
+  } catch (error) {
+    return new Response(JSON.stringify({ Error: "Failed to fetch data from external API :",error }), {
       status: 500,
       headers: {
         "Content-Type": "application/json",
