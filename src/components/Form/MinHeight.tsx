@@ -47,9 +47,11 @@ const MinHeight = () => {
     feet = parseInt(feetPart);
     inches = inchesPart ? parseInt(inchesPart.replace('"', "")) : 0;
 
-    const cmValue = heightStr === "Any" ? 0 : convertToCm(feet, inches);
-    // console.log(cmValue);
+    const cmValue: number = heightStr === "Any" ? 0 : parseFloat(convertToCm(feet, inches).toFixed(2));
+    // console.log(typeof cmValue, cmValue); // Check karne ke liye
     setData((prev: object) => ({ ...prev, min_height: cmValue }));
+    
+    
   };
 
   const rangeDistance = heightOptions.length - 1;

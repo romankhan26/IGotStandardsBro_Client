@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { useAtom } from "jotai";
 import { Data, APIResponse } from "@/lib/data";
 import { fetchData } from "@/lib/api";
+import axios from "axios";
 
 const Form = () => {
   const [,setResult] = useAtom(APIResponse);
@@ -20,9 +21,12 @@ const Form = () => {
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     try{
-    const response = await fetchData(data);
+    // const response = await fetchData(data);
+    console.log('data: ', data);
+    const response:any = await axios.post("http://localhost:3000/api/query",data);
+    console.log(response.data ," ===>> reposen data")
     // console.log(response)
-    setResult(response);
+    setResult(response.data);
     const queryParams = new URLSearchParams({
       minAge: data.min_age.toString(),
       maxAge: data.max_age.toString(),
@@ -37,7 +41,7 @@ const Form = () => {
       setLoading(true);
       setError("");
 
-      router.push(`/results?${queryParams}`);
+      router.push(`/results`);
     }catch (err: unknown) {
       if (err instanceof Error) {
         console.error("Error submitting form:", err.message);

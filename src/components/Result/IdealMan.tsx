@@ -6,6 +6,7 @@ import {race} from "@/lib/data"
 
 const IdealMan = () => {
   const data= useAtomValue(Data);
+  console.log('data: ideal man', data);
   const [heightInFeet, setHeightInFeet] = useState<string>("");
   const [formattedIncome, setFormattedIncome] = useState<string>("");
 

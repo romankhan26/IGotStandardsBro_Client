@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 const DelusionScore = () => {
   const response = useAtomValue(APIResponse);
+  console.log('response:delusion ', response);
   const [delusionScore, setDelusionScore] = useState<number>(0);
   const messages = [
     "Are you sure you are a woman?",

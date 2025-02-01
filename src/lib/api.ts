@@ -6,6 +6,7 @@ export const fetchData = async (data: Record<string, unknown>) => {
       },
       body: JSON.stringify(data),
     });
+    console.log('data: ', data);
   // console.log(data)
     const result = await response.json();
     return result;
