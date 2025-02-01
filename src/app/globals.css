@@ -61,7 +61,7 @@ input[type="radio"]::after {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #1f314a7d;
+  background-color: #001f4d;
   border-radius: 50%;
   position: absolute;
   top: 50%;

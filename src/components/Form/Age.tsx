@@ -6,8 +6,8 @@ import {  useAtom } from "jotai";
 
 const Age = () => {
   const  [data,setData] = useAtom(Data);
-  const [minAge, setMinAge] = useState(data.min_age || 20);
-  const [maxAge, setMaxAge] = useState(data.max_age || 40);
+  const [minAge, setMinAge] = useState(20);
+  const [maxAge, setMaxAge] = useState(40);
   console.log(minAge)
   const [isChecked, setIsChecked] = useState(data.exclude_married || false);
   const rangeDistance = 85 - 18 + 1;
