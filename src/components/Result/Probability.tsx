@@ -12,11 +12,10 @@ export default function Probability() {
   const [highlightedIndexes, setHighlightedIndexes] = useState<number[]>([]);
   const totalProbability = probability?.total_probability ?? 0;
   const probabilitytoShow =
-    probability.total_probability * 100 == 0
-      ? (probability.total_probability * 100).toFixed(2)
-      : probability.total_probability === 0
+     probability.total_probability === 0
       ? probability.total_probability.toFixed(4)
       : (probability.total_probability * 100).toFixed(2);
+
    const highlightedCount = Math.round(totalProbability * totalDots);
    const raceProbability = probability.total_probability_in_race === 0 ?probability.total_probability_in_race?.toFixed(4): probability.total_probability_in_race?.toFixed(2)
   useEffect(() => {

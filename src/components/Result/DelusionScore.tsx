@@ -23,15 +23,15 @@ const DelusionScore = () => {
   const ImageArray = delusionImage.concat(fadeImage);
   useEffect(() => {
     if (FormattedResponse <= 20) {
-      setDelusionScore(1);
+      setDelusionScore(5);
     } else if (FormattedResponse <= 40) {
-      setDelusionScore(2);
+      setDelusionScore(4);
     } else if (FormattedResponse <= 60) {
       setDelusionScore(3);
     } else if (FormattedResponse <= 80) {
-      setDelusionScore(4);
-    } else if (FormattedResponse <= 100) {
-      setDelusionScore(5);
+      setDelusionScore(2);
+    } else if (FormattedResponse < 100) {
+      setDelusionScore(1);
     } else {
       setDelusionScore(0);
     }

@@ -5,7 +5,7 @@ import {race} from "@/lib/data"
 const Race = () => {
   const setData = useSetAtom(Data);
 
-  const hnadleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = race.indexOf(e.target.value);
     // console.log(value)
     setData((prev:object)=>({ ...prev, race: value }));
@@ -25,9 +25,9 @@ const Race = () => {
             <input
               type="radio"
               id={index.toString()}
-              onChange={hnadleChange}
+              onChange={handleChange}
               name="race"
-              defaultChecked={index === 0 }
+              defaultChecked={index === 0}
               value={item}
               className="w-4 md:w-6 h-4 md:h-6 cursor-pointer"
             />
