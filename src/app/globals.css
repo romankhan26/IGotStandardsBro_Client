@@ -64,6 +64,7 @@ input[type="radio"]::after {
   background-color: #001f4d;
   border-radius: 50%;
   position: absolute;
+  border:none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
