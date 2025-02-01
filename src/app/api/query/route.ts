@@ -27,8 +27,8 @@ console.log(responseData)
       },
     });
 
-  } catch (error) {
-    return new Response(JSON.stringify({ error: "Failed to fetch data from external API" }), {
+  } catch (err) {
+    return new Response(JSON.stringify({ err: "Failed to fetch data from external API" }), {
       status: 500,
       headers: {
         "Content-Type": "application/json",
