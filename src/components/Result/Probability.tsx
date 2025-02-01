@@ -19,7 +19,7 @@ export default function Probability() {
       : (probability.total_probability * 100).toFixed(2);
    const highlightedCount = Math.round(totalProbability * totalDots);
    const raceProbability = probability.total_probability_in_race === 0 ?probability.total_probability_in_race?.toFixed(4): probability.total_probability_in_race?.toFixed(2)
-// console.log(probability)
+console.log(raceProbability)
   useEffect(() => {
     const getHighlightedIndexes = () => {
       const indexes = new Set<number>();

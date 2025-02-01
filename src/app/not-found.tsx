@@ -9,8 +9,8 @@ const NotFound = () => {
     <p>Not all those who wander are lost—but this page might be.</p>
     <Link href="/"
         
-        className="bg-secondary shadow-xl text-center  text-lg md:text-xl rounded-xl flex items-center  py-4 md:py-6 w-[80%] font-bold"
-      >Go to Home <HiHome/> </Link>
+        className="bg-secondary   hover:bg-primary  hover:text-black transition-all active:scale-95 active:bg-[#45b5ffca] duration-300 shadow-xl  text-center justify-center gap-2  text-lg md:text-xl rounded-xl flex items-center  py-4 md:py-6 w-[80%] font-bold"
+      >Go to Home <HiHome className='text-xl md:text-2xl'/> </Link>
 </div></>
 )
 }

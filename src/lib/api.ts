@@ -1,5 +1,5 @@
 export const fetchData = async (data: Record<string, unknown>) => {
-    const response = await fetch("/api/query", {
+    const response = await fetch("https://i-got-standards-bro-backend.onrender.com/api/v1/query/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
