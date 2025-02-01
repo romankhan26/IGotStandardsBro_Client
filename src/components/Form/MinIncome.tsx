@@ -8,10 +8,10 @@ const MinIncome = () => {
   const  setData = useSetAtom(Data);
   const [MinIncome, setMinIncome] = useState("5000");
 
-  const toPosition = (Number(MinIncome) / 500000) * 100; // Progress as a percentage
+  const toPosition = (Number(MinIncome) / 500000) * 100; 
   const FilledBackground = {
     left: 0,
-    width: `${toPosition}%`, // Make sure the width fills the range properly
+    width: `${toPosition}%`, 
   };
 
   const handleMinIncome = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,7 +37,7 @@ const MinIncome = () => {
       
       </h2>
 
-      <div className="  text-center md:w-[20%] w-[50%]   border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 md:px-8 py-2 md:py-2 -mb-5 md:-mb-0  mt-5 md:mt-0 font-bold rounded-xl">
+      <div className="  text-center md:w-[20%] md:max-w-[30%] w-[50%]   border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 md:px-8 py-2 md:py-2 -mb-5 md:-mb-0  mt-5 md:mt-0 font-bold rounded-xl">
          $ {readableIncomeValue}
           </div>
           </div> 

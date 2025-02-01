@@ -38,11 +38,16 @@ const Form = () => {
       setError("");
 
       router.push(`/results?${queryParams}`);
-    }catch(err:any){
-      console.error("Error submitting form:", err.message);
-      setError("An error occurred while submitting the form.");
-      return;
-    } finally {
+    }catch (err: unknown) {
+      if (err instanceof Error) {
+        console.error("Error submitting form:", err.message);
+        setError("An error occurred while submitting the form.");
+      } else {
+        console.error("An unknown error occurred:", err);
+        setError("An unknown error occurred.");
+      }
+      return;
+      } finally {
       setLoading(false);
     }
   };

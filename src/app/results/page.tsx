@@ -9,8 +9,11 @@ const Results = () => {
   const [loading, setLoading] = useState(false);
   const resetData = () => {
     setLoading(true)
-    localStorage.removeItem("output");
-    localStorage.removeItem("user input");
+    if(typeof window !== "undefined"|| typeof window !== null ){
+      localStorage.removeItem("output");
+      localStorage.removeItem("user input");
+    }
+
     setLoading(false)
   };
   return (

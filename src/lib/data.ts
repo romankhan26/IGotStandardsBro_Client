@@ -1,5 +1,7 @@
+"use client"
+
 import { atomWithStorage } from "jotai/utils";
-const a = localStorage.getItem("user input");
+const storageData = typeof window !== 'undefined'? localStorage?.getItem("user input"): ""
 export const Data = atomWithStorage("user input", {
   exclude_married: false,
   exclude_obese: false,
@@ -8,7 +10,7 @@ export const Data = atomWithStorage("user input", {
   min_height: 175.26,
   min_income: 80000,
   race: 0,
-  ...(a && JSON.parse(a)),
+  ...(storageData && JSON.parse(storageData)),
 
 });
 export const race = ["Any color or shade", "White", "Black", "Asian"];

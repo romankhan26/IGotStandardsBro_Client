@@ -1,4 +1,4 @@
-export const fetchData = async (data: any) => {
+export const fetchData = async (data: Record<string, unknown>) => {
     const response = await fetch("/api/query", {
       method: "POST",
       headers: {

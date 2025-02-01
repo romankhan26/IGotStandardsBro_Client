@@ -14,6 +14,7 @@ export default function Home() {
     className="w-full h-auto"
     width={600}
     height={600}
+    priority 
     alt="home_screen"
   />
 </div>
