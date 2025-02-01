@@ -42,7 +42,7 @@ const DelusionScore = () => {
       <h2 className="text-3xl font-bold md:text-4xl text-center my-2 mt-4 md:mt-8 md:my-4">
         Delusion Score
       </h2>
-      <div className="bg-[#ffffff18] text-base md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
+      <div className="bg-secondary text-base md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
         <div className="flex justify-center  items-center">
           {ImageArray.map((image, index) => (
             <Image

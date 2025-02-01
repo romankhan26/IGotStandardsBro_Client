@@ -8,7 +8,7 @@ const Stats = () => {
       <h2 className="text-3xl font-bold	md:text-4xl text-center mb-2 md:mb-4 ">
         Where is the data coming from?
       </h2>
-      <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
+      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
         <p>
         The <strong>Female Delusion Calculator</strong> processes statistical data from two sources.
           
@@ -25,7 +25,7 @@ const Stats = () => {
        <h2 className="text-3xl font-bold	md:text-4xl text-center my-2 md:my-4 mt-4 md:mt-8">
        Exclude Married
       </h2>
-      <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
+      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
         <p>
         What is the <strong>exclude married</strong> option about?
           
@@ -49,7 +49,7 @@ const Stats = () => {
       <h2 className="text-3xl font-bold	md:text-4xl text-center my-2 md:my-4 mt-4 md:mt-8">
        Race
       </h2>
-      <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
+      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
         <p>
         The ASEC survey allows 28 different race options to chose from, including combinations of two or more races, for example White-Black-American Indian.
           
@@ -71,7 +71,7 @@ const Stats = () => {
       <h2 className="text-3xl font-bold	md:text-4xl text-center my-2 md:my-4 mt-4 md:mt-8">
        Limitations 
       </h2>
-      <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
+      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
 <p>How is the calculator able to merge the two statistical samples (ASEC and NHANES) to generate one reliable result?</p>
 <p>In an ideal world this calculator would process just one single big statistical sample of a survey that includes all the details we need: age, marital status, race, height, bmi and personal income. Unfortunately, this is not the case. The ASEC survey lacks height and bmi details, while the NHANES lacks details about personal income. Therefore, the Female Delusion Calculator has to run two different searches, one for income and one for body measures, then it combines the two results (both opportunely filtered by age, marital status and race) into one single percentage value.</p>
 <p>The final percentage is not far from reality but it&apos;s not entirely accurate because it doesn&apos;t take into account the correlations between income and height or weight. For example, there have been studies showing that taller people tend to be paid slightly more. So, by processing the two searches independently, the calculator might underestimate the number of tall high income individuals and overestimate the tall low income ones and so on. Still... I wouldn&apos;t expect the results to be way off, but keep it in mind and take the final number with a grain of salt.</p>

@@ -9,7 +9,7 @@ const NotFound = () => {
     <p>Not all those who wander are lost—but this page might be.</p>
     <Link href="/"
         
-        className="bg-[#ffffff18] shadow-xl text-center  text-lg md:text-xl rounded-xl flex items-center  py-4 md:py-6 w-[80%] font-bold"
+        className="bg-secondary shadow-xl text-center  text-lg md:text-xl rounded-xl flex items-center  py-4 md:py-6 w-[80%] font-bold"
       >Go to Home <HiHome/> </Link>
 </div></>
 )

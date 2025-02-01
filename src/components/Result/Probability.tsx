@@ -68,7 +68,7 @@ export default function Probability() {
       <h2 className="text-3xl font-bold md:text-4xl mt-4 md:mt-8 text-center my-2 md:my-4">
         Probability
       </h2>
-      <div className="bg-[#ffffff18] text-base text-center md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
+      <div className="bg-secondary text-base text-center md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
         <svg
           viewBox={` ${viewBoxX} ${viewBoxY} ${Math.max(
             gridWidth,

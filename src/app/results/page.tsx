@@ -23,7 +23,7 @@ const Results = () => {
       <DelusionScore />
       <Link
         href="/"
-        className="bg-[#ffffff18] hover:bg-primary hover:text-black transition-all active:scale-95 active:bg-[#45b5ffca] duration-300 shadow-xl space-y-4 text-xl md:text-2xl rounded-xl p-4 md:p-8 w-full font-bold"
+        className="bg-secondary mt-4 md:mt-8 text-center my-2 md:my-4 hover:bg-primary block hover:text-black transition-all active:scale-95 active:bg-[#45b5ffca] duration-300 shadow-xl space-y-4 text-xl md:text-2xl rounded-xl p-4 md:p-8  font-bold"
         onClick={resetData}
         aria-disabled={loading}
       >

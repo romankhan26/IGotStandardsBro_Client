@@ -42,7 +42,7 @@ const IdealMan = () => {
       <h2 className="text-3xl font-bold md:text-4xl mt-4 md:mt-8 text-center mb-2 md:mb-4">
         My ideal man
       </h2>
-      <div className="bg-[#ffffff18] text-base md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
+      <div className="bg-secondary text-base md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
         <ul className="list-disc items-start mx-4">
           <li>{data?.exclude_married ? "Not married" : <span className="text-[#ffffff66]">Any marital status</span>}</li>
           <li>{raceText}</li>

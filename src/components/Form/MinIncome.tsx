@@ -1,5 +1,5 @@
 "use client";
-import "./Slider.css";
+
 import { Data } from "@/lib/data";
 import { useSetAtom } from "jotai";
 import { useState } from "react";
@@ -31,7 +31,7 @@ const MinIncome = () => {
           .reverse()
           .join("");
   return (
-    <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base md:text-lg rounded-xl p-4 md:p-8 pb-8 md:pb-16">
+    <div className="bg-secondary shadow-xl space-y-4 text-base md:text-lg rounded-xl p-4 md:p-8 pb-8 md:pb-16">
       <div className="flex items-center justify-between  flex-col md:flex-row">  <h2 className="text-3xl font-bold md:text-4xl text-center my-1 md:my-2">
         Min. Income
       

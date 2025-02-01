@@ -11,7 +11,7 @@ const Race = () => {
     setData((prev:object)=>({ ...prev, race: value }));
   };
   return (
-    <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base md:text-lg rounded-xl p-4 md:p-8 pb-8 md:pb-16">
+    <div className="bg-secondary shadow-xl space-y-4 text-base md:text-lg rounded-xl p-4 md:p-8 pb-8 md:pb-16">
       <h2 className="text-3xl font-bold md:text-4xl text-center my-1 md:my-2">
         Race
       </h2>
