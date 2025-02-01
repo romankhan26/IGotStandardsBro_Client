@@ -8,7 +8,7 @@ const Age = () => {
   const  [data,setData] = useAtom(Data);
   const [minAge, setMinAge] = useState(20);
   const [maxAge, setMaxAge] = useState(40);
-  console.log(minAge)
+  // console.log(minAge)
   const [isChecked, setIsChecked] = useState(data.exclude_married || false);
   const rangeDistance = 85 - 18 + 1;
   const AgeGap = 5;
