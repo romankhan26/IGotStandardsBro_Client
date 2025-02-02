@@ -1,14 +1,12 @@
 "use client";
 
 import { Data } from "@/lib/data";
-import { useSetAtom } from "jotai";
+import { useAtom } from "jotai";
 import { useState } from "react";
 
 const MinHeight = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const setData = useSetAtom(Data);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [isChecked, setIsChecked] = useState(false);
+  const [data,setData] = useAtom(Data);
+  const [isChecked, setIsChecked] = useState(data.exclude_obese || false);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [minHeightIndex, setMinHeightIndex] = useState(24);
 
@@ -88,7 +86,7 @@ const MinHeight = () => {
             id="minHeight"
             type="range"
             min="0"
-            max={rangeDistance} // Ensure max corresponds to heightOptions length
+            max={rangeDistance} 
             value={minHeightIndex}
             onChange={handleMinHeight}
             className="w-full"

@@ -6,7 +6,7 @@ import {race} from "@/lib/data"
 
 const IdealMan = () => {
   const data= useAtomValue(Data);
-  console.log('data: ideal man', data);
+  // console.log('data: ideal man', data);
   const [heightInFeet, setHeightInFeet] = useState<string>("");
   const [formattedIncome, setFormattedIncome] = useState<string>("");
 
@@ -35,7 +35,7 @@ const IdealMan = () => {
     }
   }, [data]);
 
-  const raceText = data?.race !== undefined && data.race >= 0 && data.race < race.length
+  const raceText = data?.race !== undefined && data.race > 0 && data.race < race.length
     ? race[data.race]
     : <span className="text-[#ffffff66]">Any race</span>; 
       return (
@@ -45,7 +45,7 @@ const IdealMan = () => {
       </h2>
       <div className="bg-secondary text-base md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
         <ul className="list-disc items-start mx-4">
-          <li>{data?.exclude_married ? "Not married" : <span className="text-[#ffffff66]">Any marital status</span>}</li>
+          <li>{!(data?.exclude_married) ? <span className="text-[#ffffff66]">Any marital status</span> :"Not married"}</li>
           <li>{raceText}</li>
           <li>
             {data?.min_height === 0

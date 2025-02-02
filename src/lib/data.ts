@@ -7,8 +7,8 @@ const storageData = typeof window !== 'undefined' ? localStorage?.getItem("user 
 const defaultData = {
   exclude_married: false,
   exclude_obese: false,
-  max_age: 20,
-  min_age: 40,
+  max_age: 40,
+  min_age: 20,
   min_height: 175.26,
   min_income: 80000,
   race: 0,

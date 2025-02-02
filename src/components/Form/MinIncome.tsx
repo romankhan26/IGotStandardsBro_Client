@@ -1,13 +1,13 @@
 "use client";
 
 import { Data } from "@/lib/data";
-import { useSetAtom } from "jotai";
+import { useAtom } from "jotai";
 import { useState } from "react";
 
 const MinIncome = () => {
-  const  setData = useSetAtom(Data);
-  const [MinIncome, setMinIncome] = useState("5000");
-
+   const [data,setData] = useAtom(Data);
+   const [MinIncome, setMinIncome] = useState(data.min_income.toString() || "5000");
+// console.log(typeof data.min_income,"minincometype" )
   const toPosition = (Number(MinIncome) / 500000) * 100; 
   const FilledBackground = {
     left: 0,

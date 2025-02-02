@@ -8,41 +8,26 @@ import MinIncome from "./MinIncome";
 import { useRouter } from "next/navigation";
 import { useAtom } from "jotai";
 import { Data, APIResponse } from "@/lib/data";
-import { fetchData } from "@/lib/api";
 import axios from "axios";
 
 const Form = () => {
-  const [,setResult] = useAtom(APIResponse);
+  const [, setResult] = useAtom(APIResponse);
   const [data] = useAtom(Data);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>("");
 
-  const handleSubmit = async(e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try{
-    // const response = await fetchData(data);
-    console.log('data: ', data);
-    const response:any = await axios.post("http://localhost:3000/api/query",data);
-    console.log(response.data ," ===>> reposen data")
-    // console.log(response)
-    setResult(response.data);
-    const queryParams = new URLSearchParams({
-      minAge: data.min_age.toString(),
-      maxAge: data.max_age.toString(),
-      excludeMarried: data.exclude_married.toString(),
-      race: data.race.toString(),
-      minHeight: data.min_height.toString(),
-      excludeObese: data.exclude_obese.toString(),
-      minIncome: data.min_income.toString(),
-    }).toString();
-
-   
+    try {
       setLoading(true);
       setError("");
 
-      router.push(`/results`);
-    }catch (err: unknown) {
+      const response = await axios.post("/api/query", data);
+      setResult(response.data);
+
+      router.push('/results');
+    } catch (err: unknown) {
       if (err instanceof Error) {
         console.error("Error submitting form:", err.message);
         setError("An error occurred while submitting the form.");
@@ -50,8 +35,7 @@ const Form = () => {
         console.error("An unknown error occurred:", err);
         setError("An unknown error occurred.");
       }
-      return;
-      } finally {
+    } finally {
       setLoading(false);
     }
   };

@@ -10,16 +10,25 @@ export default function Probability() {
   const probability = useAtomValue(APIResponse) || {};
   const data = useAtomValue(Data) || {};
 
-  console.log("data: probability", data);
+  // console.log("data: probability", data);
 
   const [highlightedIndexes, setHighlightedIndexes] = useState<number[]>([]);
 
   const totalProbability = probability.total_probability ?? 0;
-  const probabilityToShow = totalProbability
-    ? (totalProbability * 100).toFixed(2)
-    : totalProbability.toFixed(4);
+  const probabilityValue = totalProbability * 100;
+  let probabilityToShow;
+  
+  if (probabilityValue < 1) {
+    probabilityToShow = probabilityValue.toFixed(2) === "0.00"
+      ? probabilityValue.toFixed(4)
+      : probabilityValue.toFixed(2);
+  } else {
+    probabilityToShow = probabilityValue.toFixed(1);
+  }
+  
+// console.log(probabilityToShow);
 
-  const highlightedCount = Math.round(totalProbability * totalDots);
+    const highlightedCount = Math.round(totalProbability * totalDots);
   const totalProbabilityInRace = probability.total_probability_in_race ?? 0;
   const raceProbability = totalProbabilityInRace
     ? totalProbabilityInRace.toFixed(2)
@@ -94,7 +103,7 @@ export default function Probability() {
         <h2 className="text-3xl font-bold md:text-4xl text-primary my-2 md:my-4">
           {probabilityToShow}%
         </h2>
-        {data.race && data.race in race && (
+        { data.race in race && data.race !== 0 &&(
           <p>
             that is {" "}
             <span className="text-primary">{raceProbability}%</span>{" "}
@@ -103,6 +112,10 @@ export default function Probability() {
             in that age range
           </p>
         )}
+        {
+          totalProbability === 0 &&
+          <p className="text-red-600">Warning: the sample does not contain enough individuals at the selected height within the specified age range, this result might not properly reflect the real percentage value.</p>
+        }
       </div>
     </>
   );
