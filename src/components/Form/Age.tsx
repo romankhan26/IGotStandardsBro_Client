@@ -3,6 +3,7 @@ import "./Slider.css";
 import { useState } from "react";
 import { Data } from "@/lib/data";
 import {  useAtom } from "jotai";
+import { H_Two } from "../Utils/Typography";
 
 const Age = () => {
   const  [data,setData] = useAtom(Data);
@@ -47,15 +48,15 @@ const Age = () => {
   };
 
   return (
-    <div className="bg-[#ffffff18] shadow-xl space-y-4 text-base md:text-lg rounded-xl p-4 md:p-8 pb-8 md:pb-16">
-      <h2 className="text-3xl font-bold md:text-4xl text-center my-1 md:my-2">
+    <div className="shadow-xl space-y-4 text-base md:text-lg bg-secondary rounded-xl p-4 md:p-8 pb-8 md:pb-16">
+      <H_Two className=" my-1 md:my-2" text="
         Age
-      </h2>
+      "/>
 
       <div className=" py-10 w-full mx-auto">
-        <div className="bg-[#C6C6C6] h-[4px] relative rounded-full">
+        <div className="bg-[#676767] h-[4px] relative rounded-full">
           <div
-            className="bg-primary h-[4px]   absolute flex gap-5 justify-between mx-auto"
+            className="bg-primary-soft-pink h-[4px]   absolute flex gap-5 justify-between mx-auto"
             style={FilledBackground}
           ></div>
 
@@ -80,15 +81,15 @@ const Age = () => {
           />
         </div>
         {/* Container Age Representator */}
-        <div className="flex items-center justify-center gap-4 md:gap-8 -mb-5 md:-mb-0 mt-5 md:mt-10">
-          <div className=" border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 md:px-8 py-1 md:py-2 font-bold rounded-xl">
-            <span className="text-[#ababab] text-[14px]">Min.</span>
+        <div className="flex items-center justify-center gap-1 md:gap-2  -mb-5 md:-mb-0 mt-5 md:mt-10">
+          <div className=" border-[#676767] text-primary bg-accent-mint-green border-[1px] flex justify-between gap-4 px-4 md:px-8 py-1 md:py-2 font-bold rounded-xl">
+            <span className=" text-[14px]">Min.</span>
           {minAge}
           </div>
-          <div className="w-4 bg-[#c6c6c6ca] h-[1px]"/>
-          <div className=" border-[#c6c6c6ca] text-primary bg-[#001f4d] border-[1px] flex justify-between gap-4 px-4 md:px-8  py-1 md:py-2 font-bold rounded-xl">
+          <div className="w-4 bg-[#676767] h-[1px]"/>
+          <div className=" border-[#333333] text-primary bg-accent-mint-green border-[1px] flex justify-between gap-4 px-4 md:px-8  py-1 md:py-2 font-bold rounded-xl">
 
-            <span className="text-[#ababab] text-[14px]">Max.</span>
+            <span className=" text-[14px]">Max.</span>
             {maxAge}
           </div>
         </div>

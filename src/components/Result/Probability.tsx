@@ -4,6 +4,7 @@ import { useAtomValue } from "jotai";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { race } from "@/lib/data";
+import { H_Two } from "../Utils/Typography";
 
 export default function Probability() {
   const [totalDots] = useState(1000);
@@ -70,10 +71,10 @@ export default function Probability() {
   const viewBoxY = -(gridHeight / 50);
 
   return (
-    <>
-      <h2 className="text-3xl font-bold md:text-4xl mt-4 md:mt-8 text-center my-2 md:my-4">
+    <div>
+      <H_Two className=" mt-4 md:mt-8 text-center my-2 md:my-4" text="
         Probability
-      </h2>
+      "/>
       <div className="bg-secondary text-base text-center md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
         <svg
           viewBox={` ${viewBoxX} ${viewBoxY} ${Math.max(gridWidth, 1000)} ${Math.max(gridHeight, 300)}`}
@@ -83,7 +84,7 @@ export default function Probability() {
           {circlePositions.map((position, index) => (
             <circle
               key={index}
-              fill={highlightedIndexes.includes(index) ? "#ffffff" : "#ffffff18"}
+              fill={highlightedIndexes.includes(index) ? "#FF6F61" : "#00000018"}
               cx={position.cx}
               cy={position.cy}
               r={position.r}
@@ -100,9 +101,9 @@ export default function Probability() {
           <span className="font-bold">{data.max_age ?? "N/A"}</span> meets your standards
           is
         </p>
-        <h2 className="text-3xl font-bold md:text-4xl text-primary my-2 md:my-4">
-          {probabilityToShow}%
-        </h2>
+        <H_Two className="text-3xl font-bold md:text-4xl text-primary my-2 md:my-4" text={`${probabilityToShow}%`}/>
+          
+     
         { data.race in race && data.race !== 0 &&(
           <p>
             that is {" "}
@@ -117,6 +118,6 @@ export default function Probability() {
           <p className="text-red-600">Warning: the sample does not contain enough individuals at the selected height within the specified age range, this result might not properly reflect the real percentage value.</p>
         }
       </div>
-    </>
+    </div>
   );
 }

@@ -3,6 +3,7 @@ import { Data } from "@/lib/data";
 import { useAtomValue } from "jotai";
 import { useEffect, useState } from "react";
 import {race} from "@/lib/data"
+import { H_Two } from "../Utils/Typography";
 
 const IdealMan = () => {
   const data= useAtomValue(Data);
@@ -35,27 +36,24 @@ const IdealMan = () => {
     }
   }, [data]);
 
-  const raceText = data?.race !== undefined && data.race > 0 && data.race < race.length
-    ? race[data.race]
-    : <span className="text-[#ffffff66]">Any race</span>; 
+  const raceText = data?.race !== undefined && race[data.race]
       return (
     <div>
-      <h2 className="text-3xl font-bold md:text-4xl mt-4 md:mt-8 text-center mb-2 md:mb-4">
-        My ideal man
-      </h2>
+           <H_Two className=" text-center my-2 mt-4 md:mt-8 md:my-4" text="My Ideal Man"/>
+     
       <div className="bg-secondary text-base md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
         <ul className="list-disc items-start mx-4">
-          <li>{!(data?.exclude_married) ? <span className="text-[#ffffff66]">Any marital status</span> :"Not married"}</li>
+          <li>{!(data?.exclude_married) ? "Any marital status" :"Not married"}</li>
           <li>{raceText}</li>
           <li>
             {data?.min_height === 0
               ? <span className="text-[#ffffff66]">Any height</span>
               : `At least ${heightInFeet} tall`}
           </li>
-          <li>{data?.exclude_obese ? "Not obese" : <span className="text-[#ffffff66]">Any weight</span>}</li>
+          <li>{data?.exclude_obese ? "Not obese" : "Any weight"}</li>
           <li>
             {data?.min_income === 0
-              ? <span className="text-[#ffffff66]">Any income</span>
+              ?"Any income"
               : `Earning at least $${formattedIncome} per year`}
           </li>
         </ul>

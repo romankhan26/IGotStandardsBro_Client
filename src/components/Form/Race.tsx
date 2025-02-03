@@ -2,6 +2,7 @@
 import { Data } from "@/lib/data";
 import { useSetAtom } from "jotai";
 import {race} from "@/lib/data"
+import { H_Two } from "../Utils/Typography";
 const Race = () => {
   const setData = useSetAtom(Data);
 
@@ -11,10 +12,10 @@ const Race = () => {
     setData((prev:object)=>({ ...prev, race: value }));
   };
   return (
-    <div className="bg-secondary shadow-xl space-y-4 text-base md:text-lg rounded-xl p-4 md:p-8 pb-8 md:pb-16">
-      <h2 className="text-3xl font-bold md:text-4xl text-center my-1 md:my-2">
+    <div className="bg-secondary shadow-xl space-y-4  rounded-xl p-4 md:p-8 pb-8 md:pb-16">
+     <H_Two className="text-3xl font-bold md:text-4xl text-center my-1 md:my-2" text="
         Race
-      </h2>
+     "/>
       <div className="flex items-start justify-center space-y-2 flex-col">
         {race.map((item, index) => (
           <label

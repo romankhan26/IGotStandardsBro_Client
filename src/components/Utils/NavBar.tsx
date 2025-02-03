@@ -9,11 +9,11 @@ const NavBar = () => {
   setOpen(!open);
 }
   return (
-    <div className="  bg-[#fffff4d7] border-b-2 border-b-[#fffff4] shadow-2xl">
-      <div className=" flex items-center text-[#343434] relative justify-between h-[40px] md:h-[70px] px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64 max-w-7xl w-full mx-auto">
-       <Link href="/"><h2 className="font-serif font-bold md:text-[24px] text-[16px]">
+    <div className=" bg-secondary ">
+      <div className=" flex items-center relative justify-between h-[40px] md:h-[70px] px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64 max-w-7xl w-full mx-auto">
+       <Link href="/"><h2 className="font-serif shadow-rose-950 font-bold md:text-[24px] text-[16px]">
           IGot
-          <span className="text-[#4e95ff] "><i>Standards</i></span>Bro
+          <span className="text-primary-soft-pink "><i>Standards</i></span>Bro
         </h2></Link>
         <FiMenu
           className="h-[25px]  w-[25px]  cursor-pointer md:hidden"
