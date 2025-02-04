@@ -12,11 +12,13 @@ const Race = () => {
     setData((prev:object)=>({ ...prev, race: value }));
   };
   return (
-    <div className="bg-secondary shadow-xl space-y-4  rounded-xl p-4 md:p-8 pb-8 md:pb-16">
-     <H_Two className="text-3xl font-bold md:text-4xl text-center my-1 md:my-2" text="
+    <div className="shadow-xl space-y-4 bg-secondary rounded-xl p-4 md:p-8 pb-8 md:pb-16 h-[400px] max-w-[800px]">
+     <H_Two className="text-3xl font-bold md:text-4xl text-center mt-1 md:mt-2" text="
         Race
      "/>
-      <div className="flex items-start justify-center space-y-2 flex-col">
+     <br />
+     <br />
+      <div className="flex items-start justify-start space-y-2 flex-col">
         {race.map((item, index) => (
           <label
             htmlFor={index.toString()}

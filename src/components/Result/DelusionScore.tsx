@@ -1,9 +1,8 @@
 "use client";
 import { APIResponse } from "@/lib/data";
 import { useAtomValue } from "jotai";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import { H_Five, H_Four, H_Six, H_Three, H_Two } from "../Utils/Typography";
+import { H_Four, H_Six, H_Two } from "../Utils/Typography";
 
 const DelusionScore = () => {
   const response = useAtomValue(APIResponse);
@@ -71,7 +70,7 @@ const DelusionScore = () => {
   
 
   return (
-    <div>
+    <div className="rounded-3xl ">
       <H_Two className=" text-center my-2 mt-4 md:mt-8 md:my-4" text="        Delusion Score
 "/>
       <div className="bg-secondary text-base md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">

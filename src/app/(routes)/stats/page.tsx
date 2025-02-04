@@ -2,10 +2,10 @@ import { H_One, H_Two } from "@/components/Utils/Typography";
 
 const Stats = () => {
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-44 xl:px-72 max-w-7xl text-center w-full mx-auto my-10 md:my-20">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64 min-h-screen max-w-7xl text-center w-full mx-auto my-10 md:my-20 flex flex-col justify-center items-center">
       <H_One
         text="Stats"
-        className=" mb-3 md:mb-6  text-shadow   text-primary-soft-pink"
+        className=" mb-3 md:mb-6  text-shadow   text-primary"
       />
 
       {/* section 1  data coming from  */}
@@ -16,7 +16,7 @@ const Stats = () => {
         className=" mb-2 md:mb-4 "
       />
 
-      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
+      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-3xl p-4 md:p-8  pb-8 md:pb-16">
         <p>
           The <strong>Female Delusion Calculator</strong> processes statistical
           data from two sources.
@@ -48,12 +48,12 @@ const Stats = () => {
         className="text-3xl font-bold	md:text-4xl my-2 md:my-4 mt-4 md:mt-8"
       />
 
-      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
+      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-3xl p-4 md:p-8  pb-8 md:pb-16">
         <p>
           What is the <strong>exclude married</strong> option about?
         </p>
         <p>The marital status options in the ASEC survey are: </p>
-        <ol className="list-decimal ml-4 md:ml-8">
+        <ol className="list-decimal ml-4 md:ml-8 text-left ">
           <li>Married, spouse present</li>
           <li>Married, spouse absent</li>
           <li>Separated</li>
@@ -75,7 +75,7 @@ const Stats = () => {
         className="text-3xl font-bold	md:text-4xl my-2 md:my-4 mt-4 md:mt-8"
       />
 
-      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
+      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-3xl p-4 md:p-8  pb-8 md:pb-16">
         <p>
           The ASEC survey allows 28 different race options to chose from,
           including combinations of two or more races, for example
@@ -85,7 +85,7 @@ const Stats = () => {
           In order to simplify the user experience, the calculator shows you
           only 4 options:
         </p>
-        <ol className="list-decimal ml-4 md:ml-8">
+        <ol className="list-decimal ml-4 md:ml-8 text-left">
           <li>All races and combinations</li>
           <li>Non-hispanic white</li>
           <li>Pure black</li>
@@ -99,7 +99,7 @@ const Stats = () => {
         className="text-3xl font-bold	md:text-4xl my-2 md:my-4 mt-4 md:mt-8"
       />
 
-      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-xl p-4 md:p-8  pb-8 md:pb-16">
+      <div className="bg-secondary shadow-xl space-y-4 text-base	md:text-lg rounded-3xl p-4 md:p-8  pb-8 md:pb-16">
         <p>
           How is the calculator able to merge the two statistical samples (ASEC
           and NHANES) to generate one reliable result?

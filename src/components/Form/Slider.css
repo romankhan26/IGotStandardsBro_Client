@@ -4,7 +4,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 18px;
     height: 18px;
     border-radius:50%;
-    background-color: #fff;
+    background-color: #fefefb;
     box-shadow: 0 0 0 1px #C6C6C6;
     cursor: grab;
   }
@@ -15,19 +15,19 @@ input[type=range]::-webkit-slider-thumb {
     pointer-events: all;
     width: 18px;
     height: 18px;
-    background-color: #fff;
+    background-color: #fefefb;
     border-radius: 50%;
     box-shadow: 0 0 0 1px #C6C6C6;
     cursor:grab;  
   }
   
   input[type=range]::-webkit-slider-thumb:hover {
-    background: #f7f7f7;
+    background: #fefefb;
   }
   
   input[type=range]::-webkit-slider-thumb:active {
-    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
-    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    box-shadow: inset 0 0 3px #B497BD, 0 0 9px #B497BD;
+    -webkit-box-shadow: inset 0 0 3px #B497BD, 0 0 9px #B497BD;
   }
   
   input[type="range"] { 

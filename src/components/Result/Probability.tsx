@@ -71,7 +71,7 @@ export default function Probability() {
   const viewBoxY = -(gridHeight / 50);
 
   return (
-    <div>
+    <div className="rounded-3xl ">
       <H_Two className=" mt-4 md:mt-8 text-center my-2 md:my-4" text="
         Probability
       "/>

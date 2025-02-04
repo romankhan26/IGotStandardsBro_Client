@@ -4,6 +4,7 @@ import NavBar from "@/components/Utils/NavBar";
 import { Suspense } from "react";
 import Loading from "./loading";
 import {  Merriweather} from 'next/font/google';
+import Footer from "@/components/Utils/Footer";
 // import {Poppins, Lora } from 'next/font/google';
 
 // const poppins = Poppins({
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
   description: "",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,14 +37,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${merriweather.className} antialiased overflow-x-hidden font-merriweather text-base md:text-lg font-normal text-text-dark-charcoal`}
+        className={`${merriweather.className} min-h-screen flex flex-col antialiased overflow-x-hidden font-merriweather text-base md:text-lg font-normal text-text-dark-charcoal`}
       >
-        <NavBar/>
-        <div className=" md:px-12  ">
-        <Suspense fallback={<Loading />}>
-        {children}
-</Suspense>
-        </div>
+        <NavBar />
+        <main className="flex-grow md:px-12">
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </main>
+        <Footer />
       </body>
     </html>
   );

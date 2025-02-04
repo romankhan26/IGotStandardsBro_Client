@@ -41,26 +41,27 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-10">
-     <div className="md:grid grid-cols-2 gap-4  space-y-6">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64 min-h-screen max-w-7xl w-full mx-auto flex flex-col justify-center items-center">
+
+    <form onSubmit={handleSubmit} className="my-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+
      <AgeSlider />
-     <Race />
-     </div>
-     <br />
-   <div className="md:grid grid-cols-2 gap-4 space-y-6">
+    <Race />
    <MinHeight />
    <MinIncome />
    </div>
-   <br />
+<br />
       <button
         type="submit"
-        className="hover:bg-transparent border-primary-soft-pink hover:border-2 bg-primary-soft-pink text-white transition-all active:scale-95 active:bg-primary-soft-pink active:text-white hover:text-primary-soft-pink duration-300 shadow-xl space-y-4 text-xl md:text-2xl rounded-xl p-4 md:p-8 w-full font-bold"
+        className="hover:bg-transparent  border-primary border-2 bg-primary text-white transition-all active:scale-95 active:bg-primary active:text-white hover:text-primary duration-300 shadow-xl space-y-4 text-xl md:text-2xl rounded-l-full rounded-r-full  p-3 md:p-4 w-full font-bold"
         disabled={loading}
       >
         {loading ? "Submitting..." : "Submit"}
       </button>
       {error && <p className="text-red-500 mt-4 ">{error}</p>}
     </form>
+        </div>
   );
 };
 

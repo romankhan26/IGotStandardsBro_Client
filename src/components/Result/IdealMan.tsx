@@ -38,7 +38,7 @@ const IdealMan = () => {
 
   const raceText = data?.race !== undefined && race[data.race]
       return (
-    <div>
+    <div className="rounded-3xl ">
            <H_Two className=" text-center my-2 mt-4 md:mt-8 md:my-4" text="My Ideal Man"/>
      
       <div className="bg-secondary text-base md:text-lg shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">

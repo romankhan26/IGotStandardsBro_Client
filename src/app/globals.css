@@ -9,12 +9,20 @@ body {
   /* background-color:#d9c3a4; */
   /* background-image: url("../../public/assets/background.png"); */
   background: linear-gradient(to right bottom, #ffffff, #d1b188);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
+/* background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center;
+ background-size: contain; */
 }
+.routes {
+  background-image: url("../../public/assets/image_homepage\ \(1\).png");
+
+}
+
 .bg-secondary{
   background: linear-gradient(to right bottom, #ffffffbb, #d1b1883f);
 

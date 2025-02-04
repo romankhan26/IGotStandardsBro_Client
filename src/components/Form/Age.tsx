@@ -48,15 +48,15 @@ const Age = () => {
   };
 
   return (
-    <div className="shadow-xl space-y-4 text-base md:text-lg bg-secondary rounded-xl p-4 md:p-8 pb-8 md:pb-16">
+    <div className="shadow-xl space-y-4  bg-secondary rounded-3xl p-4 md:p-8 pb-8 md:pb-16 h-[400px] max-w-[800px]">
       <H_Two className=" my-1 md:my-2" text="
         Age
       "/>
 
       <div className=" py-10 w-full mx-auto">
-        <div className="bg-[#676767] h-[4px] relative rounded-full">
+        <div className="bg-secondary-light-gray h-[4px] relative rounded-full">
           <div
-            className="bg-primary-soft-pink h-[4px]   absolute flex gap-5 justify-between mx-auto"
+            className="bg-primary h-[4px]   absolute flex gap-5 justify-between mx-auto"
             style={FilledBackground}
           ></div>
 
@@ -81,13 +81,15 @@ const Age = () => {
           />
         </div>
         {/* Container Age Representator */}
-        <div className="flex items-center justify-center gap-1 md:gap-2  -mb-5 md:-mb-0 mt-5 md:mt-10">
-          <div className=" border-[#676767] text-primary bg-accent-mint-green border-[1px] flex justify-between gap-4 px-4 md:px-8 py-1 md:py-2 font-bold rounded-xl">
+        <div className="flex items-center justify-center gap-1 md:gap-2   -mb-5 md:-mb-0 mt-5 md:mt-10">
+          <div className=" border-[#676767] text-primary bg-accent
+           border-[1px] flex justify-between gap-4 px-4 md:px-8 py-1 md:py-2 font-bold rounded-xl">
             <span className=" text-[14px]">Min.</span>
           {minAge}
           </div>
-          <div className="w-4 bg-[#676767] h-[1px]"/>
-          <div className=" border-[#333333] text-primary bg-accent-mint-green border-[1px] flex justify-between gap-4 px-4 md:px-8  py-1 md:py-2 font-bold rounded-xl">
+          <div className="w-4 bg-[#333333] h-[1px]"/>
+          <div className=" border-[#333333] text-primary bg-accent
+           border-[1px] flex justify-between gap-4 px-4 md:px-8  py-1 md:py-2 font-bold rounded-xl">
 
             <span className=" text-[14px]">Max.</span>
             {maxAge}

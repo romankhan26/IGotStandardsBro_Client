@@ -14,13 +14,13 @@ export default {
         lora: ['Lora', 'serif'],
       },
       colors: {
-        'primary-soft-pink': '#B76E79',       // Soft Pink (Primary Color)
-        'secondary-lavender': '#B497BD',      // Lavender (Secondary Color)
-        'accent-mint-green': '#FFFFF0',       // Mint Green (Accent Color)
-        'text-dark-charcoal': '#4a261b',      // Dark Charcoal (Text Color)
-        'cta-coral': '#FF6F61',               // Coral (Hover/CTA Color)
-        'secondary-text-light-gray': '#7D7D7D', // Light Gray (Secondary Text Color)
-        // 'secondary':'#ffff1111'
+        'primary': '#B76E79',      
+        'secondary-lavender': '#006A4E',     
+        'accent': '#FFFFF0',    
+        'text-dark-charcoal': '#4a261b',     
+        'cta-coral': '#FF6F61',              
+        'secondary-light-gray': '#7D7D7D',
+       
       },
     },
   },

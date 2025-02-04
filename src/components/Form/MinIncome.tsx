@@ -32,22 +32,22 @@ const MinIncome = () => {
           .reverse()
           .join("");
   return (
-    <div className="bg-secondary shadow-xl space-y-4 rounded-xl p-4 md:p-8 pb-8 md:pb-16">
-      <div className="flex items-center justify-between  flex-col gap-2"> 
+    <div className="shadow-xl space-y-4 bg-secondary rounded-3xl p-4 md:p-8 pb-8 md:pb-16 h-[400px] max-w-[800px]">
+       <div className="flex items-center justify-between  flex-col gap-2"> 
          <H_Two className=" text-center my-1 md:my-2" text="
         Min. Income
          "/>
 
-      <div className="  text-center w-[80%] flex justify-center items-center  border-[#676767] text-primary bg-accent-mint-green border-[1px]  gap-4 px-4 md:px-8 py-2 md:py-2 -mb-5 md:-mb-0  mt-5 md:mt-0 font-bold rounded-xl">
+      <div className="  text-center w-[80%] flex justify-center items-center  border-[#676767] text-primary bg-accent border-[1px]  gap-4 px-4 md:px-8 py-2 md:py-2 -mb-5 md:-mb-2  mt-5 md:mt-2 font-bold rounded-xl">
          $ {readableIncomeValue}
           </div>
           </div> 
 
       <div className=" pt-10 w-full mx-auto">
 
-      <div className="bg-[#C6C6C6] h-[4px] relative rounded-full">
+      <div className="bg-secondary-light-gray h-[4px] relative rounded-full">
         <div
-          className="bg-primary-soft-pink absolute h-[4px] rounded-full"
+          className="bg-primary absolute h-[4px] rounded-full"
           style={FilledBackground}
         >
         </div>

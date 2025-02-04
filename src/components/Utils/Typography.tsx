@@ -40,7 +40,7 @@ export const H_Two = ({ text, className }: props) => {
 export const H_Three = ({ text, className }: props) => {
   return (
     <h3
-      className={`${className}  text-2xl md:text-3xl  lg:text-4xl font-normal text-secondary-lavender  ${poppins.className}`}
+      className={`${className}  text-2xl md:text-3xl  lg:text-4xl font-normal text-secondary-lavender  ${merriweather.className}`}
     >
       {text}
     </h3>
@@ -49,7 +49,7 @@ export const H_Three = ({ text, className }: props) => {
 export const H_Four = ({ text, className }: props) => {
   return (
     <h4
-      className={`${className}  text-xl md:text-2xl  lg:text-3xl font-merriweather font-normal text-accent-mint-green	  ${poppins.className}`}
+      className={`${className}  text-xl md:text-2xl  lg:text-3xl font-merriweather font-normal text-accent-mint-green	  ${merriweather.className}`}
     >
       {text}
     </h4>
@@ -58,7 +58,7 @@ export const H_Four = ({ text, className }: props) => {
 export const H_Five = ({ text, className }: props) => {
   return (
     <h5
-      className={`${className}   font-lora text-lg md:text-xl lg:text-2xl  text-light-gray ${poppins.className}`}
+      className={`${className}   font-lora text-lg md:text-xl lg:text-2xl  text-light-gray ${lora.className}`}
     >
       {text}
     </h5>
@@ -67,7 +67,7 @@ export const H_Five = ({ text, className }: props) => {
 export const H_Six = ({ text, className }: props) => {
   return (
     <h6
-      className={`${className}  font-lora text-base md:text-lg lg:text-xl font-normal text-secondary-lavender     ${poppins.className}`}
+      className={`${className}  font-lora text-base md:text-lg lg:text-xl font-normal text-secondary-lavender     ${lora.className}`}
     >
       {text}
     </h6>
