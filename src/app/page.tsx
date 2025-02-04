@@ -54,7 +54,7 @@ export default function Home() {
   };
 
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-32  xl:px-64 max-w-7xl w-full mx-auto min-h-screen flex justify-center items-center flex-col py-10">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32  xl:px-64 max-w-7xl w-full mx-auto min-h-screen flex justify-center items-center flex-col pb-10">
       {/* <div className="w-full max-w-7xl"> */}
       <div className="mb-12 md:mb-24 md:flex items-center justify-center text-center md:text-left  my-[40px] md:my-[70px]  gap-10 mx-auto ">
         <div className="  sm:px-32 md:px-0">
