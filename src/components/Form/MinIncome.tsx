@@ -32,7 +32,7 @@ const MinIncome = () => {
           .reverse()
           .join("");
   return (
-    <div className="shadow-xl space-y-4 bg-secondary rounded-3xl p-4 md:p-8 pb-8 md:pb-16 h-[400px] max-w-[800px]">
+    <div className="shadow-xl space-y-4 bg-secondary rounded-3xl p-4 md:p-8 pb-8 md:pb-16 h-[300px] md:h-[400px] w-full max-w-[800px]">
        <div className="flex items-center justify-between  flex-col gap-2"> 
          <H_Two className=" text-center my-1 md:my-2" text="
         Min. Income
@@ -63,10 +63,7 @@ const MinIncome = () => {
         />
       </div>
       </div>
-      {/* <div className="flex items-center gap-2">
-        <label htmlFor="minIncome">Min. Income:</label>
-        <span>{MinIncome}</span>
-  </div> */}
+     
     </div>
   );
 };

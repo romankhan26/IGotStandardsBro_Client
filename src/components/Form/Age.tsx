@@ -48,7 +48,7 @@ const Age = () => {
   };
 
   return (
-    <div className="shadow-xl space-y-4  bg-secondary rounded-3xl p-4 md:p-8 pb-8 md:pb-16 h-[400px] w-full md:max-w-[800px]">
+    <div className=" shadow-xl space-y-4  bg-secondary rounded-3xl p-4 md:p-8 pb-8 md:pb-16 md:h-[400px] h-[300px] w-full max-w-[800px]">
       <H_Two className=" my-1 md:my-2" text="
         Age
       "/>
@@ -82,14 +82,14 @@ const Age = () => {
         </div>
         {/* Container Age Representator */}
         <div className="flex items-center justify-center gap-1 md:gap-2   -mb-5 md:-mb-0 mt-5 md:mt-10">
-          <div className=" border-[#676767] text-primary bg-accent
-           border-[1px] flex justify-between gap-4 px-4 md:px-8 py-1 md:py-2 font-bold rounded-xl">
+          <div className=" border-[#676767] text-primary bg-accent w-[45%]   text-xs md:text-sm px-2 md:px-4 py-2 text-center
+           border-[1px] flex justify-between gap-4  font-bold rounded-xl">
             <span className=" text-[14px]">Min.</span>
           {minAge}
           </div>
           <div className="w-4 bg-[#333333] h-[1px]"/>
-          <div className=" border-[#333333] text-primary bg-accent
-           border-[1px] flex justify-between gap-4 px-4 md:px-8  py-1 md:py-2 font-bold rounded-xl">
+          <div className=" border-[#333333] text-primary bg-accent w-[45%]   text-xs md:text-sm px-2 md:px-4 py-2 text-center
+           border-[1px] flex justify-between gap-4 font-bold rounded-xl">
 
             <span className=" text-[14px]">Max.</span>
             {maxAge}

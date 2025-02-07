@@ -12,7 +12,7 @@ const Race = () => {
     setData((prev:object)=>({ ...prev, race: value }));
   };
   return (
-    <div className="shadow-xl space-y-4 bg-secondary rounded-xl p-4 md:p-8 pb-8 md:pb-16 h-[400px] max-w-[800px]">
+    <div className="shadow-xl space-y-4 bg-secondary rounded-3xl p-4 md:p-8 pb-8 md:pb-16 h-[300px] md:h-[400px] w-full max-w-[800px]">
      <H_Two className="text-3xl font-bold md:text-4xl text-center mt-1 md:mt-2" text="
         Race
      "/>

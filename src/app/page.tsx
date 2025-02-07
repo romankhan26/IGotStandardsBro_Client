@@ -54,10 +54,10 @@ export default function Home() {
   };
 
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-32  xl:px-64 max-w-7xl w-full mx-auto min-h-screen flex justify-center items-center flex-col pb-10">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32 overflow-x-hidden  xl:px-64 max-w-7xl w-full mx-auto min-h-screen flex justify-center items-center flex-col pb-10">
       {/* <div className="w-full max-w-7xl"> */}
       <div className="mb-12 md:mb-24 md:flex items-center justify-center text-center md:text-left  my-[40px] md:my-[70px]  gap-10 mx-auto ">
-        <div className="  sm:px-32 md:px-0">
+        <div className="  sm:px-32 md:px-0 space-y-4 md:space-y-0">
           <H_One
             className=" text-shadow "
             text="Female  Delusion
@@ -77,7 +77,7 @@ export default function Home() {
           </p>
           <br />
           <Link
-            href="/form"
+            href="#form"
             className="text-sm md:text-base w-[90%] sm:w-[80vh] mx-auto  block text-center md:w-[300px] hover:bg-transparent border-primary border-2 bg-primary text-white transition-all active:scale-95 active:bg-primary active:text-white hover:text-primary duration-300 shadow-xl p-4   md:-ml-2  md:-mt-2 rounded-l-full rounded-r-full font-bold"
           >
             Calculate Your Delusion Score
@@ -95,10 +95,12 @@ export default function Home() {
             alt="home_screen"
           />
         </div>
-
       </div>
       {/* form section */}
-      <div>
+      <div
+        className="w-full overflow-x-hidden -mx-2 px-2 md:-mx-4 md:px-4 py-10"
+        id="form"
+      >
         <form onSubmit={handleSubmit} className="my-18">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             <AgeSlider />
